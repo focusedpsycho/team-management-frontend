@@ -15,7 +15,7 @@ export class UpdateTeamMemberModalComponent implements OnInit {
   memberId: string;
   constructor(
     private dialogRef: MatDialogRef<UpdateTeamMemberModalComponent>,
-    private httpService: HttpService
+    private httpService: HttpService,
     @Inject(MAT_DIALOG_DATA) private data: TeamMember
   ) { }
   ngOnInit() {
