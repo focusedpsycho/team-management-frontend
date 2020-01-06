@@ -1,0 +1,59 @@
+table {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+.mat-card{
+    background-color: darkturquoise;
+    color: white;
+    font-weight: 500;
+    margin-top: 10px;
+
+
+}
+
+.mat-cell{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.table-row{
+    cursor: pointer;
+
+}
+
+.table-row:hover{
+    background:azure;
+}
+
+.card-body{
+    width: 100%;
+    max-height: 100%;    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.add-button{
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    color: rgb(13, 22, 13);
+    font-size: 15px;
+    font-weight: 400;
+    border: 0px;
+}
+
+.mat-paginator{
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.1), 0 8px 10px 1px rgba(0,0,0,.08), 0 3px 14px 2px rgba(0,0,0,.06);
+    margin-top: 1px;
+}
+
+td.mat-cell{
+    word-break:break-word;
+    min-width: 20%;
+    max-width: 300px;
+}

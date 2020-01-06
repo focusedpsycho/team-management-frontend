@@ -1,0 +1,145 @@
+.dialog-title {
+    color: #37c871;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+  }
+  
+  .section-header-close {
+    justify-content: flex-end !important;
+    cursor: pointer;
+    font-size: 36px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  .fly-title {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dialog-header {
+    position: absolute;
+    display: flex;
+    font-size: 17px;
+    color: white;
+    top: 10px;
+    justify-content: flex-end !important;
+  }
+  
+  .mat-dialog.container {
+    background-color: #f9f9f9ff;
+  }
+  
+  .dialog-control {
+    margin-top: auto;
+  }
+  
+  .dialog-input {
+    margin: 10px 4px;
+    padding: 0.30rem 0.5rem;
+    font-size: 12px;
+    min-width: 190px;
+  }
+  
+  .dialog-save-button {
+    background-color: #abf4abff;
+    color: black;
+    font-size: 12px;
+    padding: 11px 35px;
+    border: none;
+    width: 100%;
+  }
+  
+  .dialog-cancel-button {
+    color: #abf4abff;
+    box-sizing: border-box;
+    font-size: 12px;
+    background-color: white;
+    padding: 10px 34px;
+    border: 1px solid #abf4abff;
+  }
+  
+  .overview-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .overview-wrapper .form-label {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overview-wrapper .form-label p {
+    margin-bottom: 0;
+    margin-top: 3%;
+  }
+  .overview-wrapper .team-member-info-form {
+    padding: 1% 3%;
+  }
+  .overview-wrapper .team-member-info-form .form-row-label {
+    color: #2d2d2dff;
+    font-size: 10px;
+  }
+  .overview-wrapper .form-group {
+    position: relative;
+  }
+  .overview-wrapper .form-group .input-form-icon {
+    position: absolute;
+    font-size: 14px;
+    top: 15%;
+    right: 2%;
+    color: #c2c2c2ff;
+  }
+  .overview-wrapper .form-group .form-control {
+    padding-right: 9%;
+  }
+  
+  .add-data-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+  }
+  .add-data-wrapper .add-data-button {
+    width: 352px;
+    height: 42px;
+    background: white;
+    color: #37c871ff;
+    border: 2px solid #37c871ff;
+    font-size: 15px;
+  }
+  .add-data-wrapper .set-width-720 {
+    width: 720px;
+  }
+
+  .radio-group{
+      display: flex;
+      padding: 5%;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 12px;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 0;
+      font-weight: 300;
+  }
+
+  .error-message{
+      font-size: 9px;
+      margin: 0;
+      padding: 0;
+      padding-left: 5%;
+      font-family: 'Montserrat', sans-serif;
+      display: inline-block;
+  }
+
+  .choose-role{
+    width: 100%; text-align: center;
+  }

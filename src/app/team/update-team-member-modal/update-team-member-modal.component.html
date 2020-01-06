@@ -1,0 +1,95 @@
+<div class="fly-title">
+  <div class="dialog-header">
+    Edit Team Member
+
+  </div>
+  <span class="section-header-close" (click)="closeDialog()">
+    <mat-icon [inline]="true">close</mat-icon>
+  </span>
+</div>
+<div class="dialog-title">
+  <span mat-dialog-title class="dialog-title">Team Member Details</span>
+</div>
+<form #updateTeamMemberForm="ngForm" (ngSubmit)="saveMemberAndClose(updateTeamMemberForm)">
+  <div class="overview-wrapper">
+    <div class="center-div">
+      <div class="team-member-info-form">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <span class="input-form-icon"><i class="fa fa-address-book-o"></i></span>
+              <input type="text" class="form-control dialog-input" ngModel required minlength="3" maxlength="255" name="firstName"
+                id="firstName" placeholder="First Name">
+              <mat-error *ngIf="updateTeamMemberForm.controls['firstName']?.errors?.required 
+                                   || updateTeamMemberForm.controls['firstName']?.errors?.minlength">
+                <span class="error-message">*First Name is required( min 3 characters)</span>
+              </mat-error>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <span class="input-form-icon"><i class="fa fa-address-book-o"></i></span>
+              <input type="text" class="form-control dialog-input" ngModel required minlength="3" maxlength="255" name="lastName"
+                id="lastName" placeholder="Last Name">
+              <mat-error *ngIf="updateTeamMemberForm.controls['lastName']?.errors?.required 
+                || updateTeamMemberForm.controls['lastName']?.errors?.minlength">
+                <span class="error-message">*Last Name is required( min 3 characters )</span>
+              </mat-error>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <span class="input-form-icon"><i class="fa fa-phone"></i></span>
+              <input type="text" class="form-control dialog-input" ngModel required name="phoneNumber" minlength="8" 
+                maxlength="15" id="phoneNumber" pattern="^(\+|[0-9])\d*"
+                placeholder="Phone">
+              <mat-error *ngIf="updateTeamMemberForm.controls['phoneNumber']?.errors?.required 
+              || updateTeamMemberForm.controls['phoneNumber']?.errors?.minlength
+              || updateTeamMemberForm.controls['phoneNumber']?.errors?.pattern">
+                <span class="error-message">*Wrong phone number format</span>
+              </mat-error>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <span class="input-form-icon"><i class="fa fa-envelope-o"></i></span>
+              <input type="text" class="form-control dialog-input" ngModel required maxlength="50" email name="emailId" id="emailId"
+                placeholder="Email ID">
+              <mat-error *ngIf="updateTeamMemberForm.controls['emailId']?.errors?.required 
+                || updateTeamMemberForm.controls['emailId']?.errors?.email">
+                <span class="error-message">*Email must be valid</span>
+              </mat-error>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <mat-radio-group aria-label="Choose a Role" class="radio-group" required name="roleType" ngModel
+              id="roleType">
+              <mat-radio-button value="admin" matTooltip="allowed to delete members">Admin</mat-radio-button>
+              <mat-error *ngIf="updateTeamMemberForm.controls['roleType']?.errors?.required" class="choose-role">
+                <span class="error-message">*Choose a role</span>
+              </mat-error>
+              <mat-radio-button value="regular" matTooltip="Not allowed to delete members">Regular</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="row dialog-control">
+          <div class="col-sm-5">
+            <button type="button" (click)="deleteTeamMember()" class="dialog-delete-button">
+              Delete
+            </button>
+          </div>
+          <div class="col-sm-2"></div>
+          <div class="col-sm-5">
+            <button type="submit" [disabled]="updateTeamMemberForm.pristine" class="dialog-save-button">
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
