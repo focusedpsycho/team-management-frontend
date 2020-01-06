@@ -43,11 +43,12 @@
             <div class="form-group">
               <span class="input-form-icon"><i class="fa fa-phone"></i></span>
               <input type="text" class="form-control dialog-input" ngModel required name="phoneNumber" minlength="8" 
-                maxlength="15" id="phoneNumber"
+                maxlength="15" id="phoneNumber" pattern="^(\+|[0-9])\d*"
                 placeholder="Phone">
               <mat-error *ngIf="updateTeamMemberForm.controls['phoneNumber']?.errors?.required 
-              || updateTeamMemberForm.controls['phoneNumber']?.errors?.minlength">
-                <span class="error-message">*Phone Number is required ( min 8 characters)</span>
+              || updateTeamMemberForm.controls['phoneNumber']?.errors?.minlength
+              || updateTeamMemberForm.controls['phoneNumber']?.errors?.pattern">
+                <span class="error-message">*Wrong phone number format</span>
               </mat-error>
             </div>
           </div>
