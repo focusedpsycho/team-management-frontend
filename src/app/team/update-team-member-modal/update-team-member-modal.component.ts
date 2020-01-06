@@ -25,7 +25,7 @@ export class UpdateTeamMemberModalComponent implements OnInit {
     delete existingMemberData.memberId;
     setTimeout(() => {
       this.form.setValue(existingMemberData);
-    }, 100);
+    }, 1);
 
   }
 

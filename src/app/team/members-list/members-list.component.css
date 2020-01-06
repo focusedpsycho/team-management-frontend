@@ -52,3 +52,8 @@ table {
     margin-top: 1px;
 }
 
+td.mat-cell{
+    word-break:break-word;
+    min-width: 20%;
+    max-width: 300px;
+}
